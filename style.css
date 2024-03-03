@@ -1,0 +1,168 @@
+/* ------------------------------------------------ RULESET ------------------------------------------------ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+/* ------------------------------------------------ FONTS ------------------------------------------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+/* ------------------------------------------------- HTML ------------------------------------------------- */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+    /* color-scheme: light dark; */
+}
+
+/* ------------------------------------------------- ROOT ------------------------------------------------- */
+
+:root {   
+    --clr-primary: hsl(206, 17%, 8%); /* Night */
+    --clr-primary-black: hsl(0, 0%, 8%); /* Night black */
+    --clr-secondary: hsl(207, 15%, 12%); /* Eerie black */
+    --clr-tertiary: hsl(210, 15%, 16%); /* Gunmetal */
+    --clr-accent: hsl(49, 100%, 50%); /* Jonquil */
+    --clr-white: #fff; /* White */
+    --clr-black: hsla(0, 0%, 4%, 1); /* Black */
+    --clr-gradient-white: linear-gradient(270deg, hsl(0, 0%, 100%), hsl(0, 0%, 90%)); /* Gradient */
+}
+
+/* ------------------------------------------------- BODY ------------------------------------------------- */
+
+body {
+    min-width: 320px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    background: var(--clr-primary-black);
+    color: var(--clr-white);
+    margin-top: 5rem;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+li {
+    list-style: none;
+}
+
+/* ------------------------------------------------- NAV ------------------------------------------------- */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    background: var(--clr-black);
+    padding: 1rem 0;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.logo {
+    display: inherit;
+    align-items: center;
+    gap: 1rem;
+    color: var(--clr-accent);
+    font-size: 2rem;
+    text-shadow: var(--clr-primary) 0.3rem 0.3rem 0.2rem
+}
+
+.logo-img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: var(--clr-accent);
+    background-clip: padding-box;
+    background-position: center;
+}
+
+.navmenu {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    display: inline;
+    padding: 0 0.5rem;
+}
+
+.nav-link {
+    color: var(--clr-accent);
+    font-size: 1.25rem;
+    text-shadow: var(--clr-primary) 0.3rem 0.3rem 0.2rem
+}
+
+.logo:hover, .nav-link:hover {
+    color: var(--clr-white);
+    text-shadow:  var(--clr-white) 0.1rem 0.1rem 1rem;
+}
+.logo-img:hover {
+    background-color: var(--clr-white);
+    box-shadow: var(--clr-white) 0.1rem 0.1rem 1rem;
+}
+
+/* ------------------------------------------------- PORTFOLIO ------------------------------------------------- */
+
+
+.container-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgb(0, 0, 0);
+    color: var(--clr-white);
+    text-align: center;
+}
+
+.hero-header {
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.hero-img {
+    background: var(--clr-black);
+    animation: blink 4s linear infinite;
+}
+
+.hero-img:hover {
+    animation: none;
+}
+
+@keyframes blink {
+    25% {
+        opacity: 0.5;
+
+        
+    }
+    50% {
+        opacity: 0;
+
+    }
+    75% {
+        opacity: 0.5;
+    }
+}
