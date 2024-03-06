@@ -562,10 +562,19 @@ li {
     color: var(--clr-white);
     text-align: center;
     padding: 4rem 0;
+}
+.footer-text {
+    font-size: 1.15rem;
+    font-weight: 400;
     text-shadow: var(--clr-white) 0.1rem 0.1rem 0.5rem;
-    
 }
 
+.bi-arrow-up-circle {
+    font-size: 3rem;
+    color: var(--clr-accent);
+}
 
-/* ------------------------------------------------- MEDIA ------------------------------------------------- */
-
+.bi-arrow-up-circle:hover {
+    color: var(--clr-white);
+    text-shadow:  var(--clr-white) 0.1rem 0.1rem 0.5rem;
+}
