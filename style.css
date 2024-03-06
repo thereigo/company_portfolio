@@ -20,8 +20,7 @@ video {
 
 /* ------------------------------------------------ FONTS ------------------------------------------------ */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ------------------------------------------------- HTML ------------------------------------------------- */
 
@@ -48,10 +47,10 @@ html {
 
 body {
     min-width: 320px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', Helvetica, Roboto, sans-serif;
     font-size: 1rem;
     line-height: 1.5;
-    background: var(--clr-primary-black);
+    background: var(--clr-black);
     color: var(--clr-white);
     margin-top: 5rem;
 }
@@ -83,6 +82,7 @@ li {
 }
 
 .logo {
+    /* font-family: system-ui, Helvetica, sans-serif; */
     display: inherit;
     align-items: center;
     gap: 1rem;
@@ -125,7 +125,7 @@ li {
     box-shadow: var(--clr-white) 0.1rem 0.1rem 1rem;
 }
 
-/* ------------------------------------------------- PORTFOLIO ------------------------------------------------- */
+/* ------------------------------------------------- HEADER ------------------------------------------------- */
 
 
 .container-header {
@@ -143,7 +143,7 @@ li {
     padding: 2rem;
 }
 
-.hero-title, .hero-subtitle, .hero-btn {
+.hero-title, .hero-subtitle, .hero-btn  {
     font-family: "Montserrat", sans-serif;
 }
 
@@ -180,7 +180,7 @@ li {
 
 .hero-btn:hover {
     text-shadow:  var(--clr-accent) 0.1rem 0.1rem 0.5rem;
-    box-shadow: var(--clr-accent) 0rem 0rem 2rem;
+    box-shadow: var(--clr-accent) 0rem 0rem 1rem;
 
 }
 
@@ -223,4 +223,163 @@ li {
     100% {
         border-image-source: linear-gradient(360deg, hsl(0, 0%, 100%), var(--clr-accent));
     }
+}
+
+/* ------------------------------------------------- PORTFOLIO ------------------------------------------------- */
+
+.container-portfolio {
+    background: linear-gradient(180deg, var(--clr-black), var(--clr-primary-black));
+    color: var(--clr-white);
+    text-align: center;
+}
+
+.portfolio-title {
+    margin-top: 5rem;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: var(--clr-white) 0.1rem 0.1rem 0.5rem;
+}
+
+.galery {
+    height: 110rem;
+    max-height: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: minmax(20rem, auto);
+    gap: 0.5rem;
+    padding: 6rem;
+}
+
+.galery div {
+    border: 0.2rem solid var(--clr-accent);
+    border-radius: 0.5rem;
+}
+
+.grid1 {
+    background: url(./images/File\ 25.jpg) no-repeat center center/cover;
+    grid-area: 1 / 1 / 3 / 3;
+}
+.grid2 {
+    background: url(./images/File\ 6.jpg) no-repeat center center/cover;
+    grid-area: 1 / 3 / 2 / 7;
+}
+.grid3 {
+    background: url(./images/File\ 7.jpg) no-repeat center center/cover;
+    grid-area: 1 / 7 / 2 / 9;
+}
+.grid4 {
+    background: url(./images/File\ 32.jpg) no-repeat center center/cover;
+    grid-area: 3 / 4 / 4 / 6;
+}
+.grid5 {
+    background: url(./images/File\ 11.jpg) no-repeat center center/cover;
+    grid-area: 2 / 6 / 4 / 8;
+}
+.grid6 {
+    background: url(./images/File\ 12.jpg) no-repeat center center/cover;
+    grid-area: 4 / 1 / 6 / 3;
+}
+.grid7 {
+    background: url(./images/File\ 29.jpg) no-repeat center center/cover;
+    grid-area: 3 / 1 / 4 / 4;
+}
+.grid8 {
+    background: url(./images/File\ 24.jpg) no-repeat center center/cover;
+    grid-area: 2 / 3 / 3 / 6;
+}
+.grid9 {
+    background: url(./images/File\ 4.jpg) no-repeat center center/cover;
+    grid-area: 2 / 8 / 3 / 9;
+}
+.grid10 {
+    background: url(./images/File\ 27.jpg) no-repeat center center/cover;
+    grid-area: 3 / 8 / 4 / 9;
+}
+.grid11 {
+    background: url(./images/File\ 30.jpg) no-repeat center center/cover;
+    grid-area: 4 / 7 / 6 / 9;
+}
+.grid12 {
+    background: url(./images/File\ 9.jpg) no-repeat center center/cover;
+    grid-area: 4 / 3 / 6 / 5;
+}
+.grid13 {
+    background: url(./images/File\ 5.jpg) no-repeat center center/cover;
+    grid-area: 4 / 5 / 6 / 7;
+}
+
+/* ------------------------------------------------- TEAM ------------------------------------------------- */
+
+.container-team {
+    background: var(--clr-primary-black);
+    color: var(--clr-white);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.section-title {
+    /* margin-top: 5rem; */
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: var(--clr-white) 0.1rem 0.1rem 0.5rem;
+}
+.section-subtitle {
+    font-size: 1.5rem;
+    text-shadow: var(--clr-white) 0.1rem 0.1rem 0.5rem;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    border: 0.2rem solid var(--clr-accent);
+    border-radius: 0.5rem;
+
+
+}
+.member-bio {
+    width: 15rem;
+    background: var(--clr-white) center center/cover;
+    color: var(--clr-primary-black);
+    position: relative;
+    padding: 1rem;
+    font-size: 1.15rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    border: 0.2rem solid var(--clr-primary-black);
+    
+    
+}
+
+
+.team-member-img {
+    margin: 1rem 0;
+    width: 10rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.member-social {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.bi {
+    color: var(--clr-black);
 }
